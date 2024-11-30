@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - communicator
+
+  cortex:
+    build:
+      context: ./services/cortex
+    ports:
+      - "8001:8001"
+
+  communicator:
+    build:
+      context: ./services/communicator
+    ports:
+      - "8000:8000"
+    depends_on:
+      - cortex
+      - authenticator
+
+  authenticator:
+    build:
+      context: ./services/authenticator
+    ports:
+      - "8002:8002"
+
+  analytics:
+    build:
+      context: ./services/analytics
+    ports:
+      - "8003:8003"

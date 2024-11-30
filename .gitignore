@@ -1,0 +1,77 @@
+# Arquivos de sistema e IDEs
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+*.iml
+
+# Logs e debug
+logs/
+*.log
+*.out
+*.pid
+debug.log
+
+# Arquivos de ambiente
+.env
+*.env
+*.env.local
+*.env.production
+*.env.development
+
+# Node.js (Frontend e Micro Serviços em Node.js)
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+
+# Python (Cortex, Communicator, Analytics, Authenticator)
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/debug.log
+**/migrations/
+**/dist/
+**/build/
+
+# Dados de Treinamento
+data/raw/
+data/processed/
+
+# Docker
+*.pid
+*.seed
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Next.js (Frontend específico)
+frontend/.next/
+frontend/out/
+frontend/.next/cache/
+frontend/static/
+
+# Hugging Face e Modelos de IA
+services/*/models/
+services/*/checkpoints/
+services/*/logs/
+services/*/training_runs/
+
+# Outros possíveis arquivos grandes ou temporários
+*.tmp
+*.bak
+*.swp
+
+# Ferramentas específicas
+# Jupyter Notebook (se usado em análise de dados ou treinamento de IA)
+*.ipynb_checkpoints/
+
+# Configurações de contêiner (se houver ambiente local com configurações personalizadas)
+.env.docker.local
+docker-compose.override.yml
+docker-compose.override.yaml
